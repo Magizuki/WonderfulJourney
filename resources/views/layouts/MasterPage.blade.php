@@ -25,6 +25,12 @@
             background-color: rgb(195, 198, 201);
         }
 
+        
+        #Active-Nav{
+            background-color: black;
+            color: white;
+        }
+
         h1{
             text-align: center;
         }
@@ -48,10 +54,17 @@
         @guest
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        @if($Name == 'home')
+                            <li class="nav-item" id="Active-Nav">
+                                <a class="nav-link" href="/" >Home</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                        @endif
+                        
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Categories
@@ -86,7 +99,7 @@
           </nav>    
         @endguest
 
-        
+
     </div>
 
     @yield('content')
