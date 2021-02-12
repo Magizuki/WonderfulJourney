@@ -19,12 +19,77 @@
     {{-- css inline --}}
     @yield('CSS_Inline_MasterPage')
 
+    <style>
+
+        #titleheader{
+            background-color: rgb(195, 198, 201);
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        h5{
+            text-align: center;
+        }
+
+    </style>
+
 </head>
 <body>
-    
-    
+    <div class="container-fluid" id="titleheader">
+        <br>
+        <h1>Wonderful Journey</h1>
+        <h5>Blog of Indonesia Tourism</h5>
+        <br>
+    </div>
+    <br>
+    <div class="container">
+        @guest
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Beach</a></li>
+                            <li><a class="dropdown-item" href="#">Mountain</a></li>
+                            <li><a class="dropdown-item" href="#">Museum</a></li>
+                            <li><a class="dropdown-item" href="#">Temple</a></li>
+                            <li><a class="dropdown-item" href="#">Zoo</a></li>
+                            <li><a class="dropdown-item" href="#">Lake</a></li>
+                            <li><a class="dropdown-item" href="#">National Park</a></li>
+                            <li><a class="dropdown-item" href="#">Waterfall</a></li>
+                            <li><a class="dropdown-item" href="#">Crater</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                      <div class="d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                      </div> 
+                    </ul>
+                </div>
+          </nav>    
+        @endguest
 
+        
+    </div>
 
+    @yield('content')
 
 </body>
 </html>
