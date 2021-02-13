@@ -17,7 +17,7 @@
     <title>@yield('title')</title>
 
     {{-- css inline --}}
-    @yield('CSS_Inline_MasterPage')
+    @yield('CSS_Inline')
 
     <style>
 

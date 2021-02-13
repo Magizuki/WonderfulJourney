@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home', ['Name' => 'home']);
-});
+Route::get('/', 'ArticleController@getAllArticle');
+Route::get('/{id}', 'ArticleController@getFullStoryArticle');
+Route::get('/{category}', 'ArticleController@getCategorizeArticle');
