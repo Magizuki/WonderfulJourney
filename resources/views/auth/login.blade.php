@@ -52,7 +52,7 @@
         </div>
         <br>
         <div class="button">
-            <button type="submit" class="btn btn-outline-primary" id="button">Register</button>
+            <button type="submit" class="btn btn-outline-primary" id="button">Login</button>
         </div>  
     </form>
     <br>
