@@ -18,6 +18,7 @@
         .col{
             height: 200px;
         }
+        
 
     </style>
 @endsection

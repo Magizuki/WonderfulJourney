@@ -56,8 +56,8 @@
                 <div class="container-fluid">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                         @if($Name == 'home' || $Name == 'fullstory' || $Name == 'blogcategory')
-                            <li class="nav-item" id="Active-Nav">
-                                <a class="nav-link" href="/" >Home</a>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Active-Nav" href="/" >Home</a>
                             </li>
                         @else
                             <li class="nav-item">
@@ -82,7 +82,12 @@
                           </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            @if ($Name == 'aboutUs')
+                                <a class="nav-link" id="Active-Nav" href="/public/about-us">About Us</a>
+                            @else
+                                <a class="nav-link" href="/public/about-us">About Us</a>
+                            @endif
+                            
                         </li>
                     </ul>
                     <ul class="navbar-nav">

@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ArticleController@getAllArticle');
 Route::get('/fullstory/{id}', 'ArticleController@getFullStoryArticle');
 Route::get('/{category}', 'ArticleController@getCategorizeArticle');
+Route::get('/public/about-us', function(){
+    return view('about_us',['Name' => 'aboutUs']);
+});
