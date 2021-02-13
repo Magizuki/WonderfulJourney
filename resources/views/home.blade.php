@@ -35,7 +35,7 @@
                 <div class="description">
                     {{$article->description}}
                 </div>
-                <p>...<a href="" class="blueLink">full story</a></p>
+                <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                 <p class="font-italic">Category : <a href="" class="blueLink"><i>{{$article->Category->name}}</i></a></p>
                 
             </div>
@@ -45,7 +45,7 @@
                 <div class="description">
                     {{$article->description}}
                 </div>
-                <p>...<a href="" class="blueLink">full story</a></p>
+                <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                 <p class="font-italic">Category : <a href="" class="blueLink"><i>{{$article->Category->name}}</i></a></p>
                 
             </div>
@@ -55,7 +55,7 @@
                 <div class="description">
                     {{$article->description}}
                 </div>
-                <p>...<a href="" class="blueLink">full story</a></p>
+                <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                 <p class="font-italic">Category : <a href="" class="blueLink"><i>{{$article->Category->name}}</i></a></p>
                 
             </div>
@@ -65,7 +65,7 @@
                 <div class="description">
                     {{$article->description}}
                 </div>
-                <p>...<a href="" class="blueLink">full story</a></p>
+                <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                 <p class="font-italic">Category : <a href="" class="blueLink"><i>{{$article->Category->name}}</i></a></p>
                 
             </div>
@@ -75,13 +75,11 @@
                 <div class="description">
                     {{$article->description}}
                 </div>
-                <p>...<a href="" class="blueLink">full story</a></p>
+                <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                 <p class="font-italic">Category : <a href="" class="blueLink"><i>{{$article->Category->name}}</i></a></p>
                 
             </div>
 
-           
-            
         @endforeach
         {{$articles->links()}}
     </div>

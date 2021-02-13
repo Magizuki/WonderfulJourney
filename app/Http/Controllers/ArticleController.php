@@ -13,8 +13,9 @@ class ArticleController extends Controller
         return view('home', ['Name' => 'home', 'articles' => $articles]);
     }
 
-    public function getFullStoryArticle(Request $request){
-        
+    public function getFullStoryArticle($id){
+        $article = Article::where("id","=",$id)->first();
+        return View('fullstory',['Name' => 'fullstory','article' => $article]);
     }
 
     public function getCategorizeArticle(){

@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'ArticleController@getAllArticle');
-Route::get('/{id}', 'ArticleController@getFullStoryArticle');
+Route::get('/fullstory/{id}', 'ArticleController@getFullStoryArticle');
 Route::get('/{category}', 'ArticleController@getCategorizeArticle');

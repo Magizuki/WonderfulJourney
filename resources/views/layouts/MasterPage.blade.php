@@ -55,7 +55,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-                        @if($Name == 'home')
+                        @if($Name == 'home' || $Name == 'fullstory')
                             <li class="nav-item" id="Active-Nav">
                                 <a class="nav-link" href="/" >Home</a>
                             </li>
