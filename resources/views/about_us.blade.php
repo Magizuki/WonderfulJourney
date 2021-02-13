@@ -28,8 +28,7 @@
         <br>
         <div class="description">
             Wonderful Journey is a website for Indonesia Tourism to share their thought when travelling
-            in Indonesia, with this website various tourism can create blogs about their travelling experience in Indonesia.
-            
+            in Indonesia, with this website, various tourism can create blogs about their travelling experience in Indonesia.   
         </div>
     </div>
 

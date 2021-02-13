@@ -85,7 +85,7 @@
                             @if ($Name == 'aboutUs')
                                 <a class="nav-link" id="Active-Nav" href="/public/about-us">About Us</a>
                             @else
-                                <a class="nav-link" href="/public/about-us">About Us</a>
+                                <a class="nav-link" href="/wonderful-world/about-us">About Us</a>
                             @endif
                             
                         </li>
@@ -93,10 +93,10 @@
                     <ul class="navbar-nav">
                       <div class="d-flex">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sign Up</a>
+                            <a class="nav-link" href="/wonderful-world/register">Sign Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <a class="nav-link" href="/wonderful-world/login">Login</a>
                         </li>
                       </div> 
                     </ul>
