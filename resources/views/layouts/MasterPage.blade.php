@@ -55,7 +55,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-                        @if($Name == 'home' || $Name == 'fullstory')
+                        @if($Name == 'home' || $Name == 'fullstory' || $Name == 'blogcategory')
                             <li class="nav-item" id="Active-Nav">
                                 <a class="nav-link" href="/" >Home</a>
                             </li>
@@ -70,15 +70,15 @@
                             Categories
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Beach</a></li>
-                            <li><a class="dropdown-item" href="#">Mountain</a></li>
-                            <li><a class="dropdown-item" href="#">Museum</a></li>
-                            <li><a class="dropdown-item" href="#">Temple</a></li>
-                            <li><a class="dropdown-item" href="#">Zoo</a></li>
-                            <li><a class="dropdown-item" href="#">Lake</a></li>
-                            <li><a class="dropdown-item" href="#">National Park</a></li>
-                            <li><a class="dropdown-item" href="#">Waterfall</a></li>
-                            <li><a class="dropdown-item" href="#">Crater</a></li>
+                            <li><a class="dropdown-item" href="/1">Beach</a></li>
+                            <li><a class="dropdown-item" href="/2">Mountain</a></li>
+                            <li><a class="dropdown-item" href="/3">Museum</a></li>
+                            <li><a class="dropdown-item" href="/4">Temple</a></li>
+                            <li><a class="dropdown-item" href="/5">Zoo</a></li>
+                            <li><a class="dropdown-item" href="/6">Lake</a></li>
+                            <li><a class="dropdown-item" href="/7">National Park</a></li>
+                            <li><a class="dropdown-item" href="/8">Waterfall</a></li>
+                            <li><a class="dropdown-item" href="/9">Crater</a></li>
                           </ul>
                         </li>
                         <li class="nav-item">

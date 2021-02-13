@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -18,8 +19,11 @@ class ArticleController extends Controller
         return View('fullstory',['Name' => 'fullstory','article' => $article]);
     }
 
-    public function getCategorizeArticle(){
-
+    public function getCategorizeArticle($category){
+        $articles = Article::where("category_id","=",$category)->paginate(9);
+        $category = Category::where("id","=",$category)->first();
+        
+        return view('blogcategory',['Name' => 'blogcategory', 'articles' => $articles, 'category' => $category, 'count' => count($articles)]);
     }
 
 
