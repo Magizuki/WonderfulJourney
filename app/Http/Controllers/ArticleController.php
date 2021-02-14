@@ -20,8 +20,8 @@ class ArticleController extends Controller
     }
 
     public function getCategorizeArticle($category){
-        $articles = Article::where("category_id","=",$category)->paginate(9);
-        $category = Category::where("id","=",$category)->first();
+        $articles = Article::where('category_id','=',$category)->paginate(9);
+        $category = Category::where('id','=',$category)->first();
         
         return view('blogcategory',['Name' => 'blogcategory', 'articles' => $articles, 'category' => $category, 'count' => count($articles)]);
     }

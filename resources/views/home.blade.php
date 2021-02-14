@@ -24,6 +24,10 @@
 @endsection
 
 @section('content')
+
+@if (Auth::check())
+    <script>window.location = "/greeting" </script>
+@endif
     
 <div class="container">
     <br>

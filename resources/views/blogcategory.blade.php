@@ -33,6 +33,10 @@
 
 @section('content')
 
+    @if (Auth::check())
+        <script>window.location = "/greeting" </script>
+    @endif
+
     <br>
     <div class="container">
         <h1 class="categorytitle">{{$category->name}}</h1>

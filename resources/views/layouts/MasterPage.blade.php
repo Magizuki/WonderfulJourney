@@ -70,20 +70,20 @@
                             Categories
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/1">Beach</a></li>
-                            <li><a class="dropdown-item" href="/2">Mountain</a></li>
-                            <li><a class="dropdown-item" href="/3">Museum</a></li>
-                            <li><a class="dropdown-item" href="/4">Temple</a></li>
-                            <li><a class="dropdown-item" href="/5">Zoo</a></li>
-                            <li><a class="dropdown-item" href="/6">Lake</a></li>
-                            <li><a class="dropdown-item" href="/7">National Park</a></li>
-                            <li><a class="dropdown-item" href="/8">Waterfall</a></li>
-                            <li><a class="dropdown-item" href="/9">Crater</a></li>
+                            <li><a class="dropdown-item" href="category/1">Beach</a></li>
+                            <li><a class="dropdown-item" href="category/2">Mountain</a></li>
+                            <li><a class="dropdown-item" href="category/3">Museum</a></li>
+                            <li><a class="dropdown-item" href="category/4">Temple</a></li>
+                            <li><a class="dropdown-item" href="category/5">Zoo</a></li>
+                            <li><a class="dropdown-item" href="category/6">Lake</a></li>
+                            <li><a class="dropdown-item" href="category/7">National Park</a></li>
+                            <li><a class="dropdown-item" href="category/8">Waterfall</a></li>
+                            <li><a class="dropdown-item" href="category/9">Crater</a></li>
                           </ul>
                         </li>
                         <li class="nav-item">
                             @if ($Name == 'aboutUs')
-                                <a class="nav-link" id="Active-Nav" href="/public/about-us">About Us</a>
+                                <a class="nav-link" id="Active-Nav" href="/wonderful-world/about-us">About Us</a>
                             @else
                                 <a class="nav-link" href="/wonderful-world/about-us">About Us</a>
                             @endif
@@ -93,17 +93,95 @@
                     <ul class="navbar-nav">
                       <div class="d-flex">
                         <li class="nav-item">
-                            <a class="nav-link" href="/wonderful-world/register">Sign Up</a>
+                            @if ($Name == 'register')
+                                <a class="nav-link" href="/wonderful-world/register" id="Active-Nav">Sign Up</a>
+                            @else
+                                <a class="nav-link" href="/wonderful-world/register">Sign Up</a>
+                            @endif
+                            
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/wonderful-world/login">Login</a>
+                            @if ($Name == 'login')
+                                <a class="nav-link" href="/wonderful-world/login" id="Active-Nav">Login</a>
+                            @else
+                                <a class="nav-link" href="/wonderful-world/login">Login</a>
+                            @endif
                         </li>
                       </div> 
                     </ul>
                 </div>
           </nav>    
         @endguest
+        
+        @if (Auth::check())
+            @if (Auth::user()->role == 'Admin')
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                            <li class="nav-item">
+                                @if($Name == 'greeting')
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Active-Nav" href="/greeting" >Home</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/greeting">Home</a>
+                                    </li>
+                                @endif
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" >Admin</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" >User</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <div class="d-flex">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                            </div> 
+                        </ul>
+                    </div>
+                </nav>   
+            @endif
+        @endif
 
+        @if (Auth::check())
+            @if (Auth::user()->role == 'User')
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                            <li class="nav-item">
+                                @if($Name == 'greeting')
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Active-Nav" href="/greeting" >Home</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/greeting">Home</a>
+                                    </li>
+                                @endif
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" >Profil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" >Blog</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <div class="d-flex">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/logout">Logout</a>
+                                </li>
+                            </div> 
+                        </ul>
+                    </div>
+                </nav>  
+            @endif
+        @endif
 
     </div>
 
