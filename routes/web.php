@@ -45,5 +45,7 @@ Route::get('/user/profilemenu', 'UserController@showProfile')->middleware('user_
 Route::post('/user/profilemenu/{id}', 'UserController@updateUserProfile')->middleware('user_only');
 Route::get('/user/blogmenu/{id}', 'UserController@showBlogMenu')->middleware('user_only');
 Route::get('/user/blogmenu/delete/{id}', 'UserController@deleteArticle')->middleware('user_only');
+Route::get('/user/createblog', 'UserController@showCreateBlog')->middleware('user_only');
+Route::post('/user/createblog/doCreateBlog/{id}', 'UserController@doCreateBlog')->middleware('user_only');
 
 

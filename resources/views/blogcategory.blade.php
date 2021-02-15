@@ -54,40 +54,7 @@
                         <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                     
                     </div>
-
-                    <div class="col">
-                        <h3>{{$article->title}}</h3>
-                        <div class="description">
-                            {{$article->description}}
-                        </div>
-                        <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
                     
-                    </div>
-
-                    <div class="col">
-                        <h3>{{$article->title}}</h3>
-                        <div class="description">
-                            {{$article->description}}
-                        </div>
-                        <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
-                    </div>
-
-                    <div class="col">
-                        <h3>{{$article->title}}</h3>
-                        <div class="description">
-                            {{$article->description}}
-                        </div>
-                        <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
-                    </div>
-
-                    <div class="col">
-                        <h3>{{$article->title}}</h3>
-                        <div class="description">
-                            {{$article->description}}
-                        </div>
-                        <p>...<a href="/fullstory/{{$article->id}}" class="blueLink">full story</a></p>
-                    </div>
-
                 @endforeach
                 {{$articles->links()}}
             </div>

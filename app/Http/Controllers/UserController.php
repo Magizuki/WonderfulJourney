@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Category;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,5 +42,33 @@ class UserController extends Controller
     public function deleteArticle($id){
         Article::destroy($id);
         return redirect()->back();
+    }
+
+    public function showCreateBlog(){
+        $categories = Category::get();
+        return view('user.createblog',['Name' => 'blog', 'categories' => $categories]);
+    }
+
+    public function doCreateBlog($id, Request $request){
+
+        $this->validate($request, [
+            'title' => 'required|min:4|max:255',
+            'story' => 'required|min:20',
+            'photo' => 'required|mimes:jpeg,jpg,png'
+        ]);
+
+        $photoname = $request->photo->getClientOriginalName();
+        $request->photo->storeAs('',$photoname,'public');
+
+        Article::create([
+            'user_id' => $id,
+            'category_id' => $request->category,
+            'title' => $request->title,
+            'image' => $photoname,
+            'description' => $request->story
+        ]);
+
+        return redirect(url('/user/blogmenu/'.Auth::user()->id));
+
     }
 }

@@ -19,7 +19,7 @@
 @section('content')
     <br>
     <div class="table_container">
-        <button type="button" class="btn btn-outline-primary" onclick="window.location = ''">Create Blog</button>
+        <button type="button" class="btn btn-outline-primary" onclick="window.location = '/user/createblog'">Create Blog</button>
         @if (count($articles) == 0)
             <br>
             <br>

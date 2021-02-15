@@ -70,15 +70,15 @@
                             Categories
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="category/1">Beach</a></li>
-                            <li><a class="dropdown-item" href="category/2">Mountain</a></li>
-                            <li><a class="dropdown-item" href="category/3">Museum</a></li>
-                            <li><a class="dropdown-item" href="category/4">Temple</a></li>
-                            <li><a class="dropdown-item" href="category/5">Zoo</a></li>
-                            <li><a class="dropdown-item" href="category/6">Lake</a></li>
-                            <li><a class="dropdown-item" href="category/7">National Park</a></li>
-                            <li><a class="dropdown-item" href="category/8">Waterfall</a></li>
-                            <li><a class="dropdown-item" href="category/9">Crater</a></li>
+                            <li><a class="dropdown-item" href="/category/1">Beach</a></li>
+                            <li><a class="dropdown-item" href="/category/2">Mountain</a></li>
+                            <li><a class="dropdown-item" href="/category/3">Museum</a></li>
+                            <li><a class="dropdown-item" href="/category/4">Temple</a></li>
+                            <li><a class="dropdown-item" href="/category/5">Zoo</a></li>
+                            <li><a class="dropdown-item" href="/category/6">Lake</a></li>
+                            <li><a class="dropdown-item" href="/category/7">National Park</a></li>
+                            <li><a class="dropdown-item" href="/category/8">Waterfall</a></li>
+                            <li><a class="dropdown-item" href="/category/9">Crater</a></li>
                           </ul>
                         </li>
                         <li class="nav-item">

@@ -23,7 +23,7 @@ class ArticlesTableSeeder extends Seeder
                               sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari
                               terbenam (sunset beach) sebagai lawan dari pantaiSanur. Selain itu, Lapangan Udara
                               I Gusti Ngurah Rai terletak tidak jauh dari Kuta. -Wikipedia-',
-            'image' => '/Assets/PantaiKuta.jpg'
+            'image' => 'PantaiKuta.jpg'
         ]);
 
         DB::table('articles')->insert([
@@ -36,7 +36,7 @@ class ArticlesTableSeeder extends Seeder
                               sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari
                               terbenam (sunset beach) sebagai lawan dari pantaiSanur. Selain itu, Lapangan Udara
                               I Gusti Ngurah Rai terletak tidak jauh dari Kuta. -Wikipedia-',
-            'image' => '/Assets/PantaiKuta.jpg'
+            'image' => 'PantaiKuta.jpg'
         ]);
 
         DB::table('articles')->insert([
@@ -49,7 +49,7 @@ class ArticlesTableSeeder extends Seeder
                               sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari
                               terbenam (sunset beach) sebagai lawan dari pantaiSanur. Selain itu, Lapangan Udara
                               I Gusti Ngurah Rai terletak tidak jauh dari Kuta. -Wikipedia-',
-            'image' => '/Assets/PantaiKuta.jpg'
+            'image' => 'PantaiKuta.jpg'
         ]);
 
         DB::table('articles')->insert([
@@ -62,7 +62,7 @@ class ArticlesTableSeeder extends Seeder
                               sejak awal tahun 1970-an. Pantai Kuta sering pula disebut sebagai pantai matahari
                               terbenam (sunset beach) sebagai lawan dari pantaiSanur. Selain itu, Lapangan Udara
                               I Gusti Ngurah Rai terletak tidak jauh dari Kuta. -Wikipedia-',
-            'image' => '/Assets/PantaiKuta.jpg'
+            'image' => 'PantaiKuta.jpg'
         ]);
 
        

@@ -30,7 +30,7 @@
     <div class="container">
         <h1>{{$article->title}}</h1>
         <br>
-        <img src="{{$article->image}}" class="rounded" alt="Article Image">
+        <img src="{{asset('Assets/'.$article->image)}}" class="rounded" alt="Article Image">
         <br>
         <br>
         <div class="description">{{$article->description}}</div>
