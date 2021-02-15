@@ -25,9 +25,7 @@
 @endsection
 
 @section('content')
-    @if (Auth::check())
-    <script>window.location = "/greeting" </script>
-    @endif
+   
     <br>
     <div class="container">
         <h1>{{$article->title}}</h1>

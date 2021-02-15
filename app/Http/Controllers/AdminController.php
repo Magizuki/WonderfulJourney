@@ -23,4 +23,14 @@ class AdminController extends Controller
         return redirect(url('/admin/usermenu'));
     }
 
+    public function showUserArticleMenu($id){
+        $articles = Article::where('user_id','=',$id)->paginate(9);
+        return view('admin.user_articlemenu',['articles' => $articles, 'Name' => 'UserArticleMenu', 'user_id' => $id]);
+    }
+
+    public function deleteUserArticle($user_id,$article_id){
+        Article::destroy($article_id);
+        return redirect(url('/admin/usermenu/'.$user_id));
+    }
+
 }
