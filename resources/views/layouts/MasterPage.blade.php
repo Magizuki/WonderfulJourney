@@ -174,7 +174,11 @@
                                 @endif
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" >Profil</a>
+                                @if ($Name == 'profile')
+                                    <a class="nav-link" href="/user/profilemenu" id="Active-Nav" >Profil</a>
+                                @else
+                                    <a class="nav-link" href="/user/profilemenu" >Profil</a>
+                                @endif
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="" >Blog</a>
