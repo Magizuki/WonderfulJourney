@@ -133,7 +133,16 @@
                                 <a class="nav-link" href="" >Admin</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" >User</a>
+                                @if($Name == 'usermenu')
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="Active-Nav" href="/admin/usermenu" >User</a>
+                                    </li>
+                                @else
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/admin/usermenu" >User</a>
+                                    </li>
+                                @endif
+                                
                             </li>
                         </ul>
                         <ul class="navbar-nav">

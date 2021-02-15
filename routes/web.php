@@ -28,3 +28,5 @@ Route::get('/greeting', function(){
     return view('greeting', ['Name' => 'greeting']);
 });
 Route::get('/logout', 'AuthController@doLogout');
+Route::get('/admin/usermenu','AdminController@showUserMenu')->middleware('admin_only');
+Route::get('/delete/user/{id}','AdminController@deleteUser')->middleware('admin_only');

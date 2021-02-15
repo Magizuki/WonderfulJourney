@@ -19,9 +19,6 @@ class AuthController extends Controller
         $email = $request->email;
         $duplicate_email = count(User::where('email','=',$email)->get());
 
-        // echo json_encode($duplicate_email);
-        // die();
-
         $this->validate($request, [
             'name' => 'required|min:4|max:255',
             'email' => 'required|email',
@@ -52,9 +49,6 @@ class AuthController extends Controller
     }
 
     public function doLogin(Request $request){
-
-        // echo json_encode($request->role);
-        // die();
 
         $credential = $request->only( 'email', 'role', 'password');
 
