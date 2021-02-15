@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,13 +19,27 @@ class UserController extends Controller
             'email' => 'required|email',
             'phone' => 'required|min:12|max:12',
         ]);
+        $email = $request->email;
+        $duplicate_email = count(User::where('email','=',$email)->get());
 
-        User::where('id','=',$id)->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone
-        ]);
+        if($duplicate_email == 0){
+            User::where('id','=',$id)->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone
+            ]);
+            return redirect()->back()->with('alert', 'Update Profile Success');    
+        }
+        return redirect()->back()->with('alert', 'Email already exist');  
+    }
 
-        return redirect(url('/user/profilemenu'));
+    public function showBlogMenu($id){
+        $blog = Article::where('user_id','=',$id)->paginate(15);
+        return view('user.blogmenu', ['articles' => $blog, 'Name' => 'blog']);
+    }
+
+    public function deleteArticle($id){
+        Article::destroy($id);
+        return redirect()->back();
     }
 }

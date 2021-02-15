@@ -181,7 +181,11 @@
                                 @endif
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="" >Blog</a>
+                                @if ($Name == 'blog')
+                                    <a class="nav-link" href="/user/blogmenu/{{Auth::user()->id}}" id="Active-Nav" >Blog</a>
+                                @else
+                                    <a class="nav-link" href="/user/blogmenu/{{Auth::user()->id}}" >Blog</a>
+                                @endif  
                             </li>
                         </ul>
                         <ul class="navbar-nav">

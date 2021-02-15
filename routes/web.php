@@ -43,4 +43,7 @@ Route::get('/admin/usermenu/{user_id}/delete/{article_id}', 'AdminController@del
 //User only
 Route::get('/user/profilemenu', 'UserController@showProfile')->middleware('user_only');
 Route::post('/user/profilemenu/{id}', 'UserController@updateUserProfile')->middleware('user_only');
+Route::get('/user/blogmenu/{id}', 'UserController@showBlogMenu')->middleware('user_only');
+Route::get('/user/blogmenu/delete/{id}', 'UserController@deleteArticle')->middleware('user_only');
+
 

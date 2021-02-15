@@ -25,7 +25,7 @@ class AdminController extends Controller
 
     public function showUserArticleMenu($id){
         $articles = Article::where('user_id','=',$id)->paginate(9);
-        return view('admin.user_articlemenu',['articles' => $articles, 'Name' => 'usermenu', 'user_id' => $id]);
+        return view('admin.user_blogmenu',['articles' => $articles, 'Name' => 'usermenu', 'user_id' => $id]);
     }
 
     public function deleteUserArticle($user_id,$article_id){
