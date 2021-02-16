@@ -56,7 +56,7 @@ class AuthController extends Controller
             return redirect(url('/greeting'));
         }
 
-        return redirect()->back()->with('alert', 'name or password incorrect');
+        return redirect()->back()->with('alert', 'email or password incorrect');
 
     }
 
